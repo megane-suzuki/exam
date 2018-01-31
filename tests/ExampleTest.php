@@ -1,0 +1,44 @@
+<?php
+
+namespace Tests;
+
+use App\Cart;
+use App\Element;
+use App\Product;
+use PHPUnit\Framework\TestCase;
+
+class ExampleTest extends TestCase
+{
+    /**
+     * @test
+     */
+    public function view()
+    {
+        $cart = new Cart();
+
+        $expected = 'お客様のショッピングカートに商品はありません。';
+        $this->assertEquals($expected, $cart->show());
+
+        $product = new Product('Amazon Web Services 業務システム設計・移行ガイド', 3456);
+        $element = new Element($product, 0);
+
+        $cart->add($element);
+
+        $expected = 'お客様のショッピングカートに商品はありません。';
+        $this->assertEquals($expected, $cart->show());
+
+        $element = new Element($product, 1);
+
+        $cart->add($element);
+
+        $product = new Product('プログラマの数学第2版', 2376);
+        $element = new Element($product, 2);
+
+        $cart->add($element);
+
+        $expected = "Amazon Web Services 業務システム設計・移行ガイド\t3456\t1\n"
+                   ."プログラマの数学第2版\t2376\t2\n"
+                   ."小計 (3 点): \\8208";
+        $this->assertEquals($expected, $cart->show());
+    }
+}
