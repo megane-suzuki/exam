@@ -2,8 +2,6 @@
 
 amazonのショッピングカート画面を想定
 
-問題のベースは[新装版 リファクタリング](https://www.amazon.co.jp/dp/B01IGW5MG0/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
-
 # 設問
 src以下のクラスをリファクタリングしてください。
 
