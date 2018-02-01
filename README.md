@@ -1,4 +1,4 @@
-https://slack-files.com/T03N6PX77-F9313UKST-92506860a0
+![エビフライトライアングル](image.PNG)
 
 amazonのショッピングカート画面を想定
 
