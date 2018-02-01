@@ -20,13 +20,6 @@ class ExampleTest extends TestCase
         $this->assertEquals($expected, $cart->show());
 
         $product = new Product('Amazon Web Services 業務システム設計・移行ガイド', 3456);
-        $element = new Element($product, 0);
-
-        $cart->add($element);
-
-        $expected = 'お客様のショッピングカートに商品はありません。';
-        $this->assertEquals($expected, $cart->show());
-
         $element = new Element($product, 1);
 
         $cart->add($element);
