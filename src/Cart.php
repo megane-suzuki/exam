@@ -29,7 +29,7 @@ class Cart
                 if (! $element->getQuantity()) {
                     continue;
                 } else {
-                    $result .= $element->getProduct()->getTitle() . "\t" . $element->getProduct()->getPrice() . "\t" . $element->getQuantity() . "\n";
+                    $result .= $element->getProduct()->getTitle() . "\t" . $element->getProduct()->getPrice() . "\t" . $element->getQuantity() . "\r\n";
                     $amount += $element->getProduct()->getPrice() * $element->getQuantity();
                     $totalQuantity += $element->getQuantity();
                 }

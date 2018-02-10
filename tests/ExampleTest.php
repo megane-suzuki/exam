@@ -29,8 +29,8 @@ class ExampleTest extends TestCase
 
         $cart->add($element);
 
-        $expected = "Amazon Web Services 業務システム設計・移行ガイド\t3456\t1\n"
-                   ."プログラマの数学第2版\t2376\t2\n"
+        $expected = "Amazon Web Services 業務システム設計・移行ガイド\t3456\t1".PHP_EOL
+                   ."プログラマの数学第2版\t2376\t2".PHP_EOL
                    ."小計 (3 点): \\8208";
         $this->assertEquals($expected, $cart->show());
     }
